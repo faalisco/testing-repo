@@ -9,7 +9,7 @@
 
 <body>
 
-    <a href="" id="whatsapp_Btn">whatsapp</a>
+    <a href="" id="whatsapp_Btn" target="_blank">whatsapp</a>
 
 
     <script>
@@ -17,12 +17,13 @@
         const Btn = document.querySelector("#whatsapp_Btn");
         const ua = navigator.userAgent;
         Btn.addEventListener("click", () => {
-            if (ua.match(/iphone | ipad | ipod | tablet | blackberry | windows phone | android/i)) {
-                console.log("mobile");
+            if (ua.match(/iphone | android/i)) {
+
+                console.log(ua);
                 Btn.setAttribute("href", "https://api.whatsapp.com/send?phone=3945106");
 
             } else {
-                console.log("desktop");
+                console.log(ua);
                 Btn.setAttribute("href", "https://web.whatsapp.com/send?phone=3945106");
 
             }
