@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="" id="whatsapp_Btn">whatsapp</a>
+
+
+    <script>
+
+        const Btn = document.querySelector("#whatsapp_Btn");
+        const ua = navigator.userAgent;
+        Btn.addEventListener("click", () => {
+            if (ua.match(/iphone | ipad | ipod | tablet | blackberry | windows phone | android/i)) {
+                console.log("mobile");
+                Btn.setAttribute("href", "https://api.whatsapp.com/send?phone=3945106");
+
+            } else {
+                console.log("desktop");
+                Btn.setAttribute("href", "https://web.whatsapp.com/send?phone=3945106");
+
+            }
+        });
+    </script>
+</body>
+
+</html>
