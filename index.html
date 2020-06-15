@@ -18,14 +18,9 @@
         const ua = navigator.userAgent;
         Btn.addEventListener("click", () => {
             if (ua.match(/iphone | android/i)) {
-
-                alert(ua);
                 Btn.setAttribute("href", "https://api.whatsapp.com/send?phone=+2203934060");
-
             } else {
-                console.log(ua);
                 Btn.setAttribute("href", "https://web.whatsapp.com/send?phone=+2203934060");
-
             }
         });
     </script>
